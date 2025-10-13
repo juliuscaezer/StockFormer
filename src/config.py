@@ -13,6 +13,6 @@ NUM_STOCKS = 7        # Number of stocks in your multivariate input (BP, COP, CV
 DROPOUT = 0.1
 
 # -- Training Hyperparameters --
-EPOCHS = 30
+EPOCHS = 50
 BATCH_SIZE = 32
 LEARNING_RATE = 1e-6 # Transformers are sensitive to learning rate

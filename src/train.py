@@ -2,7 +2,7 @@
 
 import torch
 import torch.optim as optim
-from torch.utils.data import DataLoader, random_split
+from torch.utils.data import DataLoader, Subset
 import os
 
 # Import all the components you've built
@@ -31,8 +31,12 @@ def run_training():
     
     # Split dataset into training and validation sets (80% train, 20% val)
     train_size = int(0.8 * len(full_dataset))
-    val_size = len(full_dataset) - train_size
-    train_dataset, val_dataset = random_split(full_dataset, [train_size, val_size])
+    
+    train_indices = list(range(train_size))
+    val_indices = list(range(train_size, len(full_dataset)))
+
+    train_dataset = Subset(full_dataset, train_indices)
+    val_dataset = Subset(full_dataset, val_indices)
     
     train_loader = DataLoader(train_dataset, batch_size=config.BATCH_SIZE, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=config.BATCH_SIZE, shuffle=False)
