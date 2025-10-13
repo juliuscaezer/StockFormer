@@ -1,0 +1,21 @@
+# PyTorch for building and training the neural network
+torch
+
+# Pandas for data manipulation and reading CSV files
+pandas
+
+# NumPy for numerical operations
+numpy
+
+# Scikit-learn for model evaluation and utilities
+scikit-learn
+
+# Statsmodels for statistical tests like the Granger Causality Test
+statsmodels
+
+# Matplotlib and Seaborn for plotting results and data exploration
+matplotlib
+seaborn
+
+# Jupyter for running notebooks for analysis
+jupyter
