@@ -186,7 +186,3 @@ Handles sliding window sequences from processed stock data with proper temporal 
 - Time2Vec implementation based on [Kazemi et al., 2019](https://arxiv.org/abs/1907.05321)
 - Inspired by transformer architectures for time series forecasting
 - Built with PyTorch framework
-
----
-
-**Disclaimer**: This model is for research and educational purposes only. Past performance does not guarantee future results. Always conduct your own research before making investment decisions.
