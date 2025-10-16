@@ -90,7 +90,7 @@ def run_training():
         
         print(f"Epoch {epoch+1}/{config.EPOCHS} | Train Loss: {avg_train_loss:.6f} | Val Loss: {avg_val_loss:.6f}")
         
-        # Update the learning rate scheduler
+        # Update the learning rate (custom) scheduler
         scheduler.step(avg_val_loss)
         
         # Save the best model
