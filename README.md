@@ -6,7 +6,7 @@
 
 A transformer-based deep learning model for multivariate stock price prediction, specifically designed to predict WTI crude oil prices using temporal patterns from related energy sector stocks.
 
-## 🚀 Features
+## Features
 
 - **Hybrid Architecture**: Combines 1D-CNN feature extraction with transformer attention mechanisms
 - **Time2Vec Encoding**: Advanced temporal embeddings that capture both linear and periodic time patterns
@@ -14,7 +14,7 @@ A transformer-based deep learning model for multivariate stock price prediction,
 - **Multi-Stock Context**: Leverages 7 related oil/energy stocks for richer predictive context
 - **GPU Acceleration**: Supports CUDA for faster training and inference
 
-## 📊 Model Architecture
+## Model Architecture
 
 StockFormer employs a sophisticated multi-component architecture:
 
@@ -28,7 +28,7 @@ StockFormer employs a sophisticated multi-component architecture:
 - **Sequence Length**: 48 hours
 - **Target**: WTI crude oil price movements
 
-## 📋 Requirements
+## Requirements
 
 - Python 3.8+
 - PyTorch 2.0+
@@ -36,7 +36,7 @@ StockFormer employs a sophisticated multi-component architecture:
 
 See `requirements.txt` for complete dependency list.
 
-## 🔧 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -61,7 +61,7 @@ See `requirements.txt` for complete dependency list.
    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
    ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Training the Model
 
@@ -107,7 +107,7 @@ Explore the dataset and model performance:
 jupyter notebook notebooks/data_exploration.ipynb
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 StockFormer/
@@ -136,7 +136,7 @@ StockFormer/
 └── WARP.md                    # WARP AI development guide
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 Model hyperparameters are centralized in `src/config.py`:
 
@@ -150,7 +150,7 @@ Model hyperparameters are centralized in `src/config.py`:
 | `LEARNING_RATE` | 1e-6 | Initial learning rate |
 | `EPOCHS` | 50 | Maximum training epochs |
 
-## 📈 Training Details
+## Training Details
 
 ### Loss Function
 StockFormer uses a custom `stock_tanh_loss` that optimizes trading returns:
@@ -168,7 +168,7 @@ StockFormer uses a custom `stock_tanh_loss` that optimizes trading returns:
 - **Scheduler**: ReduceLROnPlateau (factor=0.5, patience=3)
 - **Early Stopping**: Based on validation loss
 
-## 🔬 Model Components
+## Model Components
 
 ### Time2Vec Encoding
 Learnable temporal representations that combine:
@@ -181,7 +181,7 @@ Currently implements standard PyTorch MultiheadAttention. For full replication, 
 ### Dataset Class
 Handles sliding window sequences from processed stock data with proper temporal alignment.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Time2Vec implementation based on [Kazemi et al., 2019](https://arxiv.org/abs/1907.05321)
 - Inspired by transformer architectures for time series forecasting
